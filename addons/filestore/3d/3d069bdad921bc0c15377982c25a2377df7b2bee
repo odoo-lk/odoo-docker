@@ -1,0 +1,4 @@
+
+.o_lunch_list .o_list_button {
+  width: 1px;
+}

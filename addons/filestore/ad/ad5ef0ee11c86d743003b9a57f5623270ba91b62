@@ -1,0 +1,81 @@
+
+.o_lunch_kanban {
+  display: -webkit-box; display: -webkit-flex; display: flex;
+  -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; flex-direction: column;
+  flex: 1 1 100%;
+  min-width: 0;
+  height: 100%;
+}
+
+.o_lunch_kanban .o_lunch_kanban_banner {
+  -webkit-box-flex: 0; -webkit-flex: 0 0 auto; flex: 0 0 auto;
+  border-bottom: 1px solid #CED4DA;
+  background-color: white;
+}
+
+.o_lunch_kanban .o_kanban_view {
+  flex: 1 1 100%;
+}
+
+.o_lunch_kanban .o_kanban_view.o_kanban_grouped {
+  min-height: auto;
+}
+
+.o_lunch_kanban .o_lunch_purple {
+  color: #7C7BAD;
+}
+
+.o_lunch_kanban .o_flex_basis_0 {
+  flex-basis: 0;
+}
+
+.o_lunch_kanban .o_lunch_widget {
+  min-height: 90px;
+  max-height: 33vh;
+  overflow-y: auto;
+}
+
+.o_lunch_kanban .o_lunch_widget .o_lunch_widget_info.card, .o_lunch_kanban .o_lunch_widget .o_lunch_widget_info.card .card-title, .o_lunch_kanban .o_lunch_widget .o_lunch_widget_info.card .card-body {
+  color: #4c4c4c;
+  background-color: inherit !important;
+}
+
+.o_lunch_kanban .o_lunch_widget .o_lunch_widget_info.card .card-title {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.o_lunch_kanban .o_lunch_widget .o_lunch_widget_info.card .card-body {
+  padding: 0.5rem 1rem;
+}
+
+.o_lunch_kanban .o_lunch_widget .o_lunch_widget_info.card .btn-link {
+  padding: 0;
+}
+
+.o_lunch_kanban .o_lunch_widget .o_lunch_widget_info.card .btn-link.o_lunch_open_wizard {
+  color: #4c4c4c;
+  font-weight: normal;
+}
+
+.o_lunch_image img {
+  max-width: 128px;
+  max-height: 128px !important;
+}
+
+@media (max-width: 767.98px) {
+  .o_lunch_kanban details summary {
+    list-style-type: none;
+  }
+  .o_lunch_kanban details summary::-webkit-details-marker {
+    display: none;
+  }
+  .o_lunch_kanban .o_lunch_widget {
+    max-height: 100%;
+  }
+}
+
+.o_lunch_wizard .col-10 .o_form_label {
+  font-weight: normal !important;
+}
+
