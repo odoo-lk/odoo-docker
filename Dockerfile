@@ -4,7 +4,7 @@ RUN apt-get update && apt-get  install libpq-dev gcc python3-dev -y
 RUN pip3 install pypdf2 \
     passlib \
     babel \
-    werkzeug \
+    Werkzeug==0.16.0 \
     lxml \
     decorator \
     polib \
