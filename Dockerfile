@@ -24,6 +24,5 @@ RUN find /mnt/extra-addons -type f -exec chmod 644 {} \;
 RUN find /mnt/extra-addons -type d -exec chmod 755 {} \;
 RUN sudo chown -R root:root /mnt/extra-addons
 
-CMD [ "nami", "restart", "--foreground", "odoo" ]
 
 EXPOSE 8069
