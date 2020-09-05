@@ -10,7 +10,7 @@ services:
     ports:
         - "5432:5432"
   odoo:
-    image: 'odoo-lk/odoo:13.0'
+    build: .
     depends_on:
       - postgresql
       
