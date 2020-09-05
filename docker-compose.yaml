@@ -1,27 +1,28 @@
 version: '2'
 services:
-  postgresql:
+  db:
     image: 'docker.io/bitnami/postgresql:11-debian-10'
     environment:
         - ALLOW_EMPTY_PASSWORD=yes
-        - POSTGRES_PASSWORD=odoo
-        - POSTGRES_USER=odoo
-        - POSTGRES_DATABAS=odoo
+        - POSTGRES_USER=bn_odoo
+        - POSTGRES_DATABAS=bitnami_odoo
     ports:
         - "5432:5432"
   odoo:
     build: .
     depends_on:
-      - postgresql
-      
+      - db
     ports:
       - "8069:8069"
     restart: always
     environment: 
-      - DB_HOST=postgresql
+      - DB_HOST=db
       - DB_PORT=5432
-      - DB_PASSWORD=odoo
-      - DB_USER=odoo
+      - DB_PASSWORD=password
+      - DB_USER=postgres
+      - HOST=db
+      - USER=postgres
+      - PASSWORD=password
     volumes: 
       - ./config/odoo-server.conf:/etc/odoo/odoo.conf
 # volumes:
