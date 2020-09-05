@@ -14,13 +14,10 @@ RUN pip3 install pypdf2 \
     reportlab \ 
     python-dateutil
 
-RUN easy_install six
-
 ADD ./addons /mnt/extra-addons/
 ADD ./config/odoo-server.conf /opt/bitnami/odoo/odoo-server.conf
 ADD ./config/requirements.txt /opt/bitnami/odoo/requirements.txt 
 
-RUN pip install -r /opt/bitnami/odoo/requirements.txt
 
 RUN find /mnt/extra-addons -type f -exec chmod 644 {} \;
 RUN find /mnt/extra-addons -type d -exec chmod 755 {} \;
